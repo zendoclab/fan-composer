@@ -94,7 +94,7 @@ Raw microphone/APO behavior, calibrated SPL, general speech separation, acoustic
 
 The repository contains the Rust source, tests, fixed model, deterministic teacher-training script, English build/use documentation, and a sanitized public validation snapshot. Raw device inventories, local settings, machine-specific endpoint IDs, build directories, and credentials are excluded.
 
-Author: **Kyu Lee**, **cording.ai**. See `CITATION.cff` and the preprint in the release.
+Author: **Kyu Lee**, **cording.ai**. [Read the English preprint on Zenodo](https://doi.org/10.5281/zenodo.23478732) (DOI: 10.5281/zenodo.23478732). See `CITATION.cff` and [editable preprint sources](publication/README.md).
 
 ## License
 
