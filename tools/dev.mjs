@@ -1,0 +1,17 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
+import {spawn} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const cargo=path.join(os.homedir(),'.cargo','bin','cargo.exe');
+const action=process.argv[2]??'build';
+const map={build:['build','--release','--locked'],test:['test','--release','--locked'],check:['clippy','--all-targets','--locked','--','-D','warnings'],fmt:['fmt','--all','--','--check']};
+if(!map[action])throw new Error('Usage: node tools/dev.mjs build|test|check|fmt');
+await fs.mkdir(path.join(root,'reports'),{recursive:true});
+const child=spawn(cargo,map[action],{cwd:root,windowsHide:true,shell:false,stdio:['ignore','pipe','pipe']});
+let output='';
+for(const stream of [child.stdout,child.stderr])stream.on('data',data=>{output+=data;process.stdout.write(data);});
+const code=await new Promise((resolve,reject)=>{child.on('close',resolve);child.on('error',reject);});
+await fs.writeFile(path.join(root,'reports',action+'.log'),output);
+process.exitCode=code??1;

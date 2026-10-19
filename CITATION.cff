@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use Fan Composer, please cite the accompanying preprint."
+title: "Fan Composer"
+version: "0.3.0"
+date-released: "2026-10-20"
+authors:
+  - family-names: "Lee"
+    given-names: "Kyu"
+    affiliation: "cording.ai"
+repository-code: "https://github.com/zendoclab/fan-composer"
+license: "MIT"
+preferred-citation:
+  type: article
+  title: "Fan Composer: NPU-Assisted Fan-Aware Soundscapes with Always-On Automatic Volume"
+  authors:
+    - family-names: "Lee"
+      given-names: "Kyu"
+      affiliation: "cording.ai"
+  year: 2026
+  doi: "10.5281/zenodo.23478732"
+  url: "https://zenodo.org/records/23478732"

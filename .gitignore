@@ -1,0 +1,12 @@
+/target/
+/.venv/
+/dist/
+/data/
+/tmp/
+/output/
+/reports/*
+!/reports/public/
+.env
+.env.*
+*.token
+**/zenodo-token.txt

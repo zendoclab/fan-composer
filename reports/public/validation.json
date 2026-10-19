@@ -1,0 +1,92 @@
+{
+  "version": "0.3.0",
+  "date": "2026-10-20",
+  "doi": "10.5281/zenodo.23478732",
+  "author": {
+    "name": "Kyu Lee",
+    "affiliation": "cording.ai"
+  },
+  "hardware": {
+    "cpu": "Intel Core Ultra 7 255H",
+    "gpu": "Intel Arc 140T",
+    "npu": "Intel AI Boost",
+    "npu_driver": "32.0.100.4778",
+    "windows": "Windows 11 Home x64 10.0.26300"
+  },
+  "checks": {
+    "tests_passed": 26,
+    "tests_failed": 0,
+    "release_build": true,
+    "clippy_strict": true,
+    "format": true,
+    "ui_smoke_exit": 0
+  },
+  "physical": {
+    "duration_seconds": 45,
+    "audible_output": false,
+    "raw_audio_saved": false,
+    "input_frames": 2165760,
+    "output_frames": 2167296,
+    "input_dropped": 0,
+    "reference_dropped": 0,
+    "fault": 0,
+    "callback_max_us": 619,
+    "callback_over_budget": 0,
+    "xruns": 1,
+    "quiet_after_4_seconds": 0,
+    "npu_decisions": 45,
+    "cpu_decisions": 0,
+    "rule_decisions": 0,
+    "execution_device": "NPU",
+    "automatic_volume_state": "Following fan level"
+  },
+  "policy": {
+    "runtime": "OpenVINO 2026.4.1",
+    "npu_device": "NPU",
+    "npu_decisions": 32,
+    "cpu_device": "CPU",
+    "cpu_decisions": 32,
+    "max_abs_error": 0.000552058219909668,
+    "compared_inputs": 32,
+    "fallback_injected": true,
+    "fallback_execution_device": "CPU",
+    "fallback_cpu_decisions": 32
+  },
+  "automatic_volume_simulation": {
+    "virtual_seconds_per_mode": 125,
+    "sample_rate": 8000,
+    "fft": 2048,
+    "known_stereo_leakage_delay_ms": 70,
+    "fan_relative_levels_db": [
+      0,
+      12,
+      -12
+    ],
+    "mean_gain_db_of_maximum": {
+      "Harmonic": [
+        -6,
+        -0.13793103,
+        -12.186276
+      ],
+      "Nature": [
+        -6,
+        -0.008120537,
+        -11.982717
+      ],
+      "Generative": [
+        -6,
+        -0.088140175,
+        -12.151095
+      ]
+    },
+    "note": "Controlled digital simulation, not physical acoustic rejection or listener evidence"
+  },
+  "limitations": [
+    "No controlled comfort study",
+    "No physical acoustic fan-step/self-output validation for 0.3.0",
+    "No calibrated SPL or system-power measurements",
+    "No 1-hour/8-hour endurance test",
+    "NPU unavailability injected, not physical hardware removal",
+    "No general voice separation, raw-capture verification or acoustic AEC"
+  ]
+}

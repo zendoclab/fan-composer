@@ -1,0 +1,47 @@
+{
+  "name": "teacher-distilled-policy-v1",
+  "training": "supervised imitation of documented conservative rules; no human comfort training",
+  "seed": 255,
+  "shape": [
+    1,
+    16
+  ],
+  "output_shape": [
+    1,
+    6
+  ],
+  "hidden": 32,
+  "steps": 1200,
+  "train_samples": 32768,
+  "holdout_samples": 4096,
+  "holdout_mae": 0.002927181078121066,
+  "holdout_max_error": 0.05688054859638214,
+  "runtime": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "features": [
+    "pitch",
+    "level",
+    "tonality",
+    "centroid",
+    "flatness",
+    "broadband",
+    "pitch_rate",
+    "level_rate",
+    "confidence",
+    "time_sin",
+    "time_cos",
+    "previous_brightness",
+    "previous_density",
+    "previous_motion",
+    "mode",
+    "preference"
+  ],
+  "outputs": [
+    "brightness",
+    "density",
+    "overtones",
+    "motion",
+    "reverb",
+    "stereo"
+  ],
+  "quality_improvement_claim": false
+}

@@ -1,0 +1,85 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling fan-composer v0.3.0 (<workspace>)
+    Finished `release` profile [optimized] target(s) in 47.05s
+     Running unittests src\lib.rs (target\release\deps\fan_composer-f761cf408ae0b09b.exe)
+
+running 1 test
+test audio::tests::recoverable_stream_events_are_counted_and_device_loss_stops ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\main.rs (target\release\deps\fan_composer-6216c17998e983c1.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\audibility.rs (target\release\deps\audibility-4ab0fad32c8665e8.exe)
+
+running 5 tests
+test level_slider_covers_audible_adjustment_and_exact_mute ... ok
+test low_level_spectral_jitter_does_not_duck_quiet_fan ... ok
+test sustained_louder_interference_ducks_then_releases ... ok
+test explicit_speaker_test_is_bounded_and_ends_after_two_seconds ... ok
+Harmonic: RMS -30.67 dBFS, peak -23.39 dBFS
+Nature: RMS -33.19 dBFS, peak -22.16 dBFS
+Generative: RMS -29.26 dBFS, peak -22.87 dBFS
+test default_modes_have_measurable_output_above_the_quiet_regression ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+
+     Running tests\auto_volume.rs (target\release\deps\auto_volume-fd5357b15452cb5f.exe)
+
+running 7 tests
+test existing_fixed_volume_settings_migrate_to_visible_maximum_without_a_starting_level_jump ... ok
+test invalid_or_missing_reference_cannot_raise_pending_gain ... ok
+test short_interference_and_partial_band_voice_do_not_raise_volume ... ok
+test own_speaker_level_increase_never_causes_automatic_amplification ... ok
+test all_modes_follow_sustained_fan_increase_and_decrease_with_closed_loop_playback ... ok
+test maximum_mute_peak_and_no_complete_silence_during_normal_tracking_are_preserved ... ok
+Harmonic: actual FFT/echo simulation mean gains = [-6.0, -0.13793103, -12.186276] dB of maximum
+Nature: actual FFT/echo simulation mean gains = [-6.0, -0.008120537, -11.982717] dB of maximum
+Generative: actual FFT/echo simulation mean gains = [-6.0, -0.088140175, -12.151095] dB of maximum
+test actual_fft_and_stereo_reference_follow_fan_steps_in_all_modes ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.87s
+
+     Running tests\continuity.rs (target\release\deps\continuity-1591d6a18fe5c2d6.exe)
+
+running 4 tests
+test periodic_quiet_measurement_requires_opt_in ... ok
+test startup_and_manual_calibration_are_explicit_and_finite ... ok
+test policy_changes_are_bounded_and_keep_synthesis_finite ... ok
+test all_modes_remain_non_silent_across_old_30_second_boundaries ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.77s
+
+     Running tests\dsp.rs (target\release\deps\dsp-295bd3207965175e.exe)
+
+running 8 tests
+test silence_and_corrupt_input_do_not_create_fan ... ok
+test strong_second_harmonic_does_not_replace_observed_fundamental ... ok
+test interpolated_tone_accuracy_at_both_fft_sizes ... ok
+test harmonic_evidence_and_noise_rejection ... ok
+test step_and_ramp_reacquire ... ok
+test all_simulator_cases_are_finite_and_bounded ... ok
+test start_stop_switch_and_invalid_controls_are_safe ... ok
+test synth_modes_are_distinct_repeatable_and_limited ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+
+     Running tests\real_time.rs (target\release\deps\real_time-9369c83c6c42c002.exe)
+
+running 1 test
+test callback_dsp_and_parameter_transport_do_not_allocate_after_setup ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests fan_composer
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

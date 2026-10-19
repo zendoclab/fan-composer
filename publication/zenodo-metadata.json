@@ -1,0 +1,34 @@
+{
+  "title": "Fan Composer: NPU-Assisted Fan-Aware Soundscapes with Always-On Automatic Volume",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-10-20",
+  "creators": [
+    {
+      "name": "Lee, Kyu",
+      "affiliation": "cording.ai"
+    }
+  ],
+  "description": "<p>Fan Composer is a local, Rust-native Windows research application that analyzes laptop fan noise and adds a quiet adaptive soundscape. The project began because an Intel Core Ultra 7 laptop's NPU was rarely used in everyday work, motivating a search for a useful local application for that otherwise idle hardware.</p><p>The application implements Harmonic, Nature, and Generative synthesis, always-on automatic volume bounded by a user-selected maximum, a conservative stereo playback-reference guard, and a 1 Hz OpenVINO music policy with NPU-first execution and CPU fallback. FFT, automatic volume, limiting, and audio synthesis remain CPU DSP. The small neural network imitates locally generated rules; it is not trained on human comfort ratings.</p><p>The accompanying engineering preprint reports 26 passing automated tests, closed-loop actual-FFT/synthesis simulations of fan-level steps in all three modes, real native NPU inference, CPU fallback injection, and a 45-second silent physical duplex run with 45 NPU policy decisions. The silent run recorded zero input/reference queue drops, zero stream faults and zero callback over-budget events, with one startup input Xrun. These observations do not establish audible comfort, energy savings, general source separation, physical acoustic rejection, or long-session stability.</p><p>The preprint includes the application screenshot, architecture, automatic-volume method, model provenance, actual results, build/use guidance and proposed perceptual/energy experiments. Source code, model and reproducibility materials are available in the linked GitHub repository. Describes software version 0.3.0. Preprint; not peer reviewed.</p>",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "version": "1.0",
+  "keywords": [
+    "fan noise",
+    "soundscape",
+    "automatic volume",
+    "Rust",
+    "Intel NPU",
+    "OpenVINO",
+    "local audio processing"
+  ],
+  "notes": "Engineering feasibility preprint describing Fan Composer software 0.3.0. No controlled human-subject comfort or power study has been performed. The application source/model are MIT licensed separately from this CC BY 4.0 preprint.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/zendoclab/fan-composer",
+      "relation": "describes",
+      "resource_type": "software"
+    }
+  ]
+}
